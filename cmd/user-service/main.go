@@ -6,12 +6,16 @@ import (
 	"time"
 
 	"github.com/cpkal/golang-user-service/api/models"
+	"github.com/cpkal/golang-user-service/internal/db"
 	"github.com/cpkal/golang-user-service/internal/repository"
 	"github.com/cpkal/golang-user-service/internal/service"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
+	//db init
+	db := db.Run()
+
 	//registering services
 	UserRepository := repository.NewUserRepository()
 
