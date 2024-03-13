@@ -2,7 +2,7 @@ package features
 
 import "github.com/golang-jwt/jwt/v5"
 
-func GenerateJWT() string {
+func createNewJWT() string {
 	var (
 		key []byte
 		t   *jwt.Token
